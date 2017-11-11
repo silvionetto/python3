@@ -2,9 +2,6 @@ from ubuntu:xenial
 
 MAINTAINER Silvio Netto <silvio.netto@gmail.com>
 
-ARG corp_key
-ARG password
-
 #Install using apt-get
 RUN \
 	apt-get update \
@@ -25,11 +22,3 @@ RUN \
 #Install Heroku	
 RUN \
 	wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-	
-#Install Pip
-RUN \
-	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py \
-	&& ln -s /usr/local/bin/pip3 /usr/local/bin/pip \
-	&& pip install pip --upgrade \
-	&& pip install slackclient \
-	&& pip install -r requirements.txt --proxy="http://${corp_key}:${password}@proxynlwp.europe.intranet:8080" slackclient
