@@ -10,19 +10,11 @@ RUN \
 	
 # Install Python3
 RUN \
-	curl -o /opt/Python.tar.gz https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz \
+	curl -o /opt/Python.tar.gz https://www.python.org/ftp/python/3.10.2/Python-3.10.2.tgz \
 	&& tar xvzf /opt/Python.tar.gz -C /opt/ \
 	&& rm /opt/Python.tar.gz \
-	&& cd /opt/Python-3.6.3/ \
+	&& cd /opt/Python-3.10.2/ \
 	&& ./configure --enable-optimizations \
 	&& make -j8 \
 	&& make altinstall \
 	&& ln -s /usr/local/bin/python3 /usr/local/bin/python
-	
-# Install Heroku	
-RUN \
-	wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-	
-# Install SlackClient
-RUN \
-	pip3 install slackclient
