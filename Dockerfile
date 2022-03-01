@@ -5,7 +5,7 @@ MAINTAINER Silvio Netto <silvio.netto@gmail.com>
 # Install using apt-get
 RUN \
 	apt-get update \
-	&& apt-get -y install wget curl vim git apt install build-essential \
+	&& apt-get -y install wget curl vim git build-essential \
 	zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev \
 	libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
 	
