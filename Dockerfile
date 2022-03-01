@@ -21,4 +21,4 @@ RUN \
 	&& ln -s /usr/local/bin/python3 /usr/local/bin/python
 
 RUN \
-	python -m pip --upgrade pip
+	python -m pip install --upgrade pip
