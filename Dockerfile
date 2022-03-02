@@ -1,4 +1,4 @@
-from ubuntu:xenial
+from nvidia/cuda
 
 MAINTAINER Silvio Netto <silvio.netto@gmail.com>
 
