@@ -1,4 +1,4 @@
-from nvidia/cuda:base
+from nvidia/cuda:11.6.0-base-ubuntu20.04
 
 MAINTAINER Silvio Netto <silvio.netto@gmail.com>
 
