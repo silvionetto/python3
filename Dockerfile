@@ -1,4 +1,4 @@
-from nvidia/cuda
+from nvidia/cuda:base
 
 MAINTAINER Silvio Netto <silvio.netto@gmail.com>
 
